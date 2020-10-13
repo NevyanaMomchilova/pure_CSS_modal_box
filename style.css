@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+}
+
+.modal-content {
+    width: 75%;
+    height: 65%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border-radius: 1em;
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.modal:target .modal-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+a {
+    text-decoration: none;
+}
+
+.modal-btn__close {
+    color: #363636;
+    font-size: 3em;
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+}
+
+.modal-btn__open {
+    display: inline-block;
+    color: dodgerblue;
+    margin: 2em;
+}
+
+.modal h2 {
+    color: dodgerblue;
+    margin-bottom: 1em;
+}
+
+.modal p {
+    line-height: 1.5em;
+}
+
